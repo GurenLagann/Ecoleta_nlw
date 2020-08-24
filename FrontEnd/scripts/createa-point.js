@@ -51,6 +51,8 @@ for ( const item of itemsToCollet ) {
   item.addEventListener("click", handleSelectedItem)
 }
 
+const CollectedItems = document.querySelector("input[name=items]")
+
 let selectedItems = []
 
 function handleSelectedItem(event){
@@ -62,8 +64,21 @@ function handleSelectedItem(event){
 
   //verificando se existem itens selecionados 
   const alreadySelecetd = selectedItems.findIndex(item => {
-    const intemFound = item ==itemId
+    const intemFound = item == itemId
     return intemFound
   })
-  
+
+  //se já estiver selecionado, tirar da selecao
+  if (alreadySelecetd >= 0) {
+    const filteredItems = selectedItems.filter( item => {
+      const itemIsDifferent = item != itemId
+      return itemIsDifferent
+    })
+    selectedItems = filteredItems
+  } else { //adicionar a seleção
+    selectedItems.push(itemId)
+  }
+
+  CollectedItems.value = selectedItems
+
 }
