@@ -1,0 +1,25 @@
+{
+  "name": "ecoleta_nlw",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GurenLagann/Ecoleta_nlw.git"
+  },
+  "author": "Wallace Brito",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GurenLagann/Ecoleta_nlw/issues"
+  },
+  "homepage": "https://github.com/GurenLagann/Ecoleta_nlw#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nunjucks": "^3.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
